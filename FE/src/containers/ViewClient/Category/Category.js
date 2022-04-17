@@ -55,8 +55,28 @@ function Category() {
 
     useEffect(() => {
         dispatch(getCategoryBySeo(categorySeo))
-        dispatch(getAllProductByCategorySeo(LIMIT_ITEM_ONE_PAGE_CLIENT, 1, categorySeo))
     }, [categorySeo])
+
+    useEffect(() => {
+        // dispatch(getCategoryBySeo(categorySeo))
+        //dispatch(getAllProductByCategorySeo(LIMIT_ITEM_ONE_PAGE_CLIENT, 1, categorySeo))
+        if (_.isEmpty(objSort)) {
+            if (_.isEmpty(filterPrice)) {
+                dispatch(getAllProductByCategorySeo(LIMIT_ITEM_ONE_PAGE_CLIENT, 1, categorySeo))
+            }
+            else {
+                dispatch(getAllProductByCategorySeoFilterPrice(LIMIT_ITEM_ONE_PAGE_CLIENT, 1, categorySeo, filterPrice.priceStart, filterPrice.priceEnd))
+            }
+        }
+        else {
+            if (_.isEmpty(filterPrice)) {
+                dispatch(getAllProductByCategorySeoSortBy(LIMIT_ITEM_ONE_PAGE_CLIENT, 1, categorySeo, objSort.sortBy, objSort.typeSort))
+            }
+            else {
+                dispatch(getAllProductByCategorySeoSortByFilterPrice(LIMIT_ITEM_ONE_PAGE_CLIENT, 1, categorySeo, objSort.sortBy, objSort.typeSort, filterPrice.priceStart, filterPrice.priceEnd))
+            }
+        }
+    }, [categorySeo, objSort, filterPrice])
 
     const handleOnChangePage = (data) => {
         if (_.isEmpty(objSort)) {
