@@ -1,0 +1,25 @@
+.input-text {
+    position: relative;
+
+    .btn-delete-text-search {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 25px;
+    }
+}
+
+.btn {
+    box-shadow: none !important;
+    border-color: none !important;
+    margin: 3px 3px 3px 0;
+    &.inactive {
+        opacity: 0.4;
+    }
+    &:disabled{
+        opacity: 0.4 !important;
+    }
+}
+

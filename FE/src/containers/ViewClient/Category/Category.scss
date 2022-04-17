@@ -1,0 +1,67 @@
+@import '../../../styles/variable.scss';
+@import '../../../styles/breadcrumb.scss';
+
+.category {
+    margin: 30px 0;
+    .content-left{
+        margin-top: 10px;
+        background: #f9f9f9;
+        padding: 15px 25px;
+        .sort-by{
+            text-align: left;
+            .sort-by-title{
+                font-weight: bold;
+                font-size: 16px;
+                margin: 0 10px 10px 0;
+                color: $primary-color;
+            }
+            .sort-by-select{
+                width: 100%;
+                margin-bottom: 5px;
+                outline: none;
+                border: 1px solid $primary-color;
+                border-radius: 5px;
+                padding: 5px 10px;
+            }
+    
+        }
+        .filter{
+            text-align: left;
+            margin-top: 20px;
+            .filter-title{
+                font-weight: bold;
+                font-size: 16px;
+                margin: 0 10px 10px 0;
+                color: $primary-color;
+            }
+            .filter-item{
+                margin-bottom: 8px;
+                .filter-radio{
+                    margin-right: 10px;
+                    cursor: pointer;
+                    border-color: white;
+                    outline: none;
+                }
+               .filter-label{
+                   font-size: 15px;
+                   cursor: pointer;
+                }
+            }
+        }
+  }
+}
+
+.category-empty{
+    color: red;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 120px;
+}
+
+@media screen and (max-width: 1114px) {
+    .breadcrumb{
+        .breadcrumb-content{
+            padding: 15px 0px;
+        }
+    }
+}

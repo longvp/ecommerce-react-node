@@ -1,0 +1,131 @@
+@import '../../../styles/variable.scss';
+
+.banner {
+    width: 100%;
+
+    img {
+        width     : 100%;
+        //height    : 100px;
+        object-fit: cover;
+    }
+
+    .slick-arrow {
+        display: none !important;
+    }
+    .slick-slide {
+        margin: 0 !important;
+    }
+}
+
+.policy {
+    margin-top: 100px;
+
+    .policy-item {
+        border         : 1px solid rgb(229, 233, 236);
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        padding        : 20px 0;
+        margin         : 10px 0;
+
+        .policy-icon {
+            margin-right: 15px;
+
+            i {
+                font-size: 25px;
+                color    : $primary-color;
+            }
+        }
+
+        .policy-desc {
+            .policy-title {
+                color      : $primary-color;
+                font-weight: 500;
+            }
+
+            .policy-sub-title {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.customer {
+    .customer-item {
+        display        : flex;
+        flex-direction : column;
+        align-items    : center;
+        justify-content: center;
+        padding        : 30px 20px;
+        margin-top     : 10px;
+        border-radius  : 15px;
+        border    : 1px solid #e5e9ec;
+
+        &:hover {
+            box-shadow: 0 0 10px 0 rgba(black, 0.1);
+
+            .customer-image {
+                animation: ImageRotate 3s infinite linear;
+            }
+        }
+
+        .customer-image {
+            width        : 100px;
+            height       : 100px;
+            object-fit   : cover;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .customer-rate-start {
+            margin: 10px 0;
+
+            i {
+                color       : #fed700;
+                margin-right: 5px;
+            }
+        }
+
+        .customer-name {
+            color: $primary-color;
+        }
+
+        .customer-desc {
+            margin-top        : 10px;
+            text-align        : center;
+            line-height       : 2;
+            display           : -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow          : hidden;
+            flex: 1;
+        }
+    }
+}
+
+@keyframes ImageRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.brand {
+    .brand-image {
+        width     : 200px !important;
+        object-fit: cover;
+    }
+
+    .slick-track {
+        display        : flex !important;
+        align-items    : center;
+        justify-content: space-around;
+    }
+
+    .slick-arrow {
+        display: none !important;
+    }
+}

@@ -1,0 +1,119 @@
+@import '../../../styles/variable.scss';
+
+.cart-table {
+    margin         : 0 auto;
+    margin-top     : 50px;
+    border-collapse: collapse;
+    text-align     : center;
+    width          : 100%;
+
+    th,
+    td {
+        border : 1px solid #ebebeb;
+        padding: 20px 10px;
+    }
+
+    th {
+        background-color: #f6f6f6;
+    }
+
+    .cart-item {
+        .item-image {
+            display   : block;
+            width     : 70px;
+            object-fit: cover;
+            cursor    : pointer;
+            margin    : 0 auto;
+        }
+
+        .item-name {
+            color         : $primary-color;
+            cursor        : pointer;
+            font-size     : 15px;
+            text-transform: capitalize;
+        }
+
+        .item-price-unit {
+            font-size  : 15px;
+            font-weight: 600;
+            &.price-blur{
+               text-decoration: line-through;
+               opacity: 0.35;
+            }
+        }
+
+        .item-price-total {
+            font-size  : 15px;
+            color      : #e80f0f;
+            font-weight: 600;
+        }
+
+        .item-quantity {
+            text-align   : center;
+            width        : 50px;
+            outline      : none;
+            width        : 50px;
+            padding      : 5px;
+            border       : 1px solid gray;
+        }
+
+        .item-trash-icon {
+            cursor   : pointer;
+            font-size: 30px;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.cart-empty{
+    margin-top: 90px;
+    text-align: center;
+   .cart-empty-heading{
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+    .back-home{
+        text-decoration: none;
+        font-size: 16px;
+        color: red;
+        font-weight: 500;
+    }
+}
+
+.cart-total{
+    text-align: center;
+    margin-top: 30px;
+    .cart-price{
+        margin-bottom: 20px;
+        .cart-price-title{
+            font-size: 20px;
+            text-transform: capitalize;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+        .cart-price-value{
+            color: #e80f0f;
+            font-weight: 500;
+            font-size: 20px;
+        }
+    }
+    .cart-button-order{
+        outline         : none;
+        border          : none;
+        padding         : 10px 30px;
+        border-radius   : 10px;
+        background-color: $primary-color;
+        color           : white;
+        text-transform  : uppercase;
+        width: fit-content;
+        margin: 0 auto;
+        cursor: pointer;
+         &:hover {
+            background-color: #242424;
+            transition      : 0.5s;
+        }
+    }
+}

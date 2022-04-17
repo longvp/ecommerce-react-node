@@ -1,0 +1,72 @@
+@import '../../../styles/variable.scss';
+
+.go-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: $primary-color;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    .go-to-top-icon{
+        color: white;
+        line-height: 50px;
+        font-size: 20px;
+    }
+}
+
+.footer {
+    margin-top      : 100px;
+    background-color: #f8f9f9;
+    padding         : 20px 0;
+
+    .footer-item {
+        margin-top: 20px;
+
+        .footer-title {
+            text-transform: uppercase;
+            font-size     : 18px;
+            font-weight   : 500;
+            color         : $primary-color;
+        }
+
+        ul {
+            list-style-type: none;
+            margin         : 0;
+            padding        : 0;
+
+            li {
+                &:hover {
+                    color: $primary-color;
+                }
+
+                margin-top: 5px;
+                cursor    : pointer;
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.copy-right{
+    background-color: #eeefef;
+    .content{
+        text-align: center;
+        padding: 8px 0;
+        font-size: 12px;
+        .title{
+            margin: 0 5px;
+            font-size: 12px;
+        }
+        .author{
+            font-weight: 500;
+            color: black;
+            font-size: 14px;
+        }
+    }
+}

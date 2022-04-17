@@ -1,0 +1,30 @@
+.blog-detail{
+    .blog-image{
+        display: block;
+        margin: 0 auto;
+        width: auto;
+        height: auto;
+    }
+    .blog-name{
+        text-align: center;
+        margin-top: 20px;
+        text-transform: capitalize;
+    }
+    .blog-date{
+        text-align: center;
+        i{
+            margin-right: 5px;
+        }
+        span{
+            font-style: italic;
+        }
+    }
+    .blog-descript{
+        margin-top: 20px;
+        img{
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

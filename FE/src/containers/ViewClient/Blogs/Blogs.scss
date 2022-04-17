@@ -1,0 +1,39 @@
+@import '../../../styles/variable.scss';
+
+.blog {
+    margin-top: 20px;
+    .banner-left{
+        margin-bottom: 30px;
+        img{
+            width: 100%;
+        }
+        .slick-arrow {
+            display: none !important;
+        }
+        .slick-slide {
+            margin: 0 !important;
+        }
+    }
+    .banner-right{
+        img{
+            width: 100%;
+            // &:first-child{
+            //     margin-bottom: 0px;
+            // }
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
+    .banner-right{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner-left,
+    .banner-right{
+        display: none;
+    }
+}

@@ -1,0 +1,108 @@
+@import '../../../styles/variable.scss';
+
+.order-item{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border    : 2px solid rgba(128, 128, 128, 0.266);
+    background-color: white;
+    margin: 5px 0;
+    &.isActive{
+        margin-bottom: 0;
+        box-shadow: 0px 3px 2px 0px rgba(black, 0.1);
+    }
+    .order-code{
+        font-weight: 500;
+    }
+    .order-total{
+        color: $primary-color;
+        font-weight: 500;
+    }
+    .order-time{
+        font-weight: 300;
+        color: gray;
+    }
+    .order-cancel{
+        color: red;
+        padding: 3px 5px;
+        cursor: pointer;
+        font-weight: 500;
+        &:hover{
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+        }
+        &.inactive{
+           opacity: 0;
+           cursor: auto;
+        }
+    }
+    .order-detail{
+        color: $primary-color;
+        padding: 3px 5px;
+        cursor: pointer;
+        font-weight: 500;
+        &:hover{
+            background-color: $primary-color;
+            color: white;
+            border-radius: 5px;
+        }
+    }
+}
+
+
+.order-item-detail{
+    width: 100%;
+    padding: 10px;
+    border    : 1px solid #e5e9ec;
+    // box-shadow: 0px 3px 4px 3px rgba(black, 0.1);
+    //display: none;
+    .products{
+        .product{
+            display: flex;
+            padding: 0;
+            margin: 3px 0;
+            .product-name{
+                color: #000000;
+                text-transform: capitalize;
+                min-width: 300px;
+                font-size: 13px
+            }
+            .product-quantity{
+                min-width: 100px;
+            }
+        }
+    }
+    .order-item-title{
+        display: inline-block;
+        min-width: 150px;
+        font-size: 13px;
+        color: orange;
+        font-weight: 500;
+    }
+    .order-item-status{
+        .order-item-status-value{
+            color: blue;
+            font-weight: 500;
+            font-size: 14px;
+        }
+    }
+    .order-item-total{
+        margin-top: 5px;
+        .order-item-total-value{
+            color:red;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .order-hide{
+           float: right;
+           margin-right: 20px;
+           cursor: pointer;
+           font-weight: 500;
+           color: $primary-color;
+        }
+    }
+}
+
+

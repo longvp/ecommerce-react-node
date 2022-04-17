@@ -1,0 +1,37 @@
+.breadcrumb{
+    background: #f9f9f9;
+    .breadcrumb-content{
+        padding: 15px 25px;
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li{
+                color: #a4a4a4;
+                display: inline-block;
+                font-size: 14px;
+                margin-right: 28px;
+                position: relative;
+                text-transform: capitalize;
+                .link{
+                    color: #242424;
+                    text-decoration: none;
+                }
+                &::before{
+                    background-color: #aaaaaa;
+                    content: "";
+                    height: 2px;
+                    position: absolute;
+                    right: -22px;
+                    top: 10px;
+                    transform: rotate(-67deg);
+                    transition: all 0.4s ease 0s;
+                    width: 12px;
+                }
+                &:last-child::before{
+                    display: none;
+                }
+            }
+        }
+    }
+}
